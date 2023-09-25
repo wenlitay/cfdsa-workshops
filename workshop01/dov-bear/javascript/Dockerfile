@@ -14,8 +14,6 @@ COPY views views
 RUN npm ci
 
 # RUNNING
-ENV APP_PORT=3000
-
-EXPOSE ${APP_PORT}
+ENV PORT=5000 INSTANCE_NAME="dov bear" INSTANCE_HASH="abc123"
 
 ENTRYPOINT node main.js
